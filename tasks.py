@@ -18,7 +18,6 @@ def step(x):
         return 1
     else:
         return -1
-    
 
 # -----------------------------------------------
 
@@ -32,9 +31,9 @@ def step(x):
 
 # Your code here:
 # -----------------------------------------------
+
 def ReLu(array, cutoff=0):
     return numpy.maximum(array, cutoff)
-
 
 # -----------------------------------------------
 
@@ -49,9 +48,7 @@ def ReLu(array, cutoff=0):
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer(inputs, weights):
-    result = numpy.matmul(inputs, weights)
-    return ReLu(result)
-
+def neural_net_layer(matrix, vector):
+    return ReLu(matrix @ vector)
 
 # ------------------------------------------
